@@ -18,7 +18,7 @@ Practice Spring Boot by a web application "Happy Hotel room reservation".
 1. Install jdk and set corresponding **JRE libraries** in IDE *preference*.
 2. Choose the corresponding **Maven settings.xml** file.
 3. Set up Maven build Goals: **spring-boot:run**
-4. Before Maven build, **Maven - Update Project** first to refresh all downloaded dependencies.
+4. Before Maven build, **Maven - Update Project** first to refresh all downloaded *dependencies*.
 
 ## Port & URLs
 |Name|URL|
