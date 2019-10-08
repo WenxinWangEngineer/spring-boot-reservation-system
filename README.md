@@ -1,6 +1,6 @@
 # spring-boot-reservation-system
 
-## Ovjectivces
+## Ovjectivce
 Practice Spring Boot by a web application "Happy Hotel room reservation".
 
 ## Stacks
@@ -28,7 +28,7 @@ Practice Spring Boot by a web application "Happy Hotel room reservation".
 |h2 database console|localhost:8080/h2-console|
 
 ## H2 Database Admin
-|Item|value|
+|Item|Value|
 |----|-----|
 |Username|sa|
 |Password (null)|| 
