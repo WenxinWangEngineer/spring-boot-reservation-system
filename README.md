@@ -1,7 +1,7 @@
 # spring-boot-reservation-system
 
 ## Ovjectivce
-Practice Spring Boot by a web application "Happy Hotel room reservation".
+Practice Spring Boot + RESTful API by a web application "Happy Hotel room reservation".
 
 ## Stacks
 * Java
