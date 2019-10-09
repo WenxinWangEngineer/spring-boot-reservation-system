@@ -13,6 +13,8 @@ Practice Spring Boot by a web application "Happy Hotel room reservation".
 * JavaScript
 * Bootstrap
 * thymeleaf
+* RESTful APIs
+* javadoc
 
 ## Environment Setup
 1. Install jdk and set corresponding **JRE libraries** in IDE *preference*.
@@ -32,5 +34,10 @@ Practice Spring Boot by a web application "Happy Hotel room reservation".
 |----|-----|
 |Username|sa|
 |Password (null)|| 
+
+## javadoc format
+* @author
+* @param
+* @return
 
 
