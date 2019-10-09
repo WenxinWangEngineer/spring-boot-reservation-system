@@ -2,9 +2,13 @@ package com.tiffanywang.happy.business.service;
 
 import java.util.Map;
 import java.util.HashMap;
-import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
+
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +23,8 @@ public class RoomReservationService {
 	private GuestRepository guestRepository;
 	private ReservationRepository reservationRepository;
 
+	private static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+	
 	@Autowired
 	public RoomReservationService(RoomRepository roomRepository, GuestRepository guestRepository,
 			ReservationRepository reservationRepository) {
@@ -27,8 +33,13 @@ public class RoomReservationService {
 		this.reservationRepository = reservationRepository;
 	}
 
-	public List<RoomReservation> getRoomReservationsForDate(Date date) {
-
+	/**
+	 * 
+	 * @param	dateString	a string represents date such as 2019-10-08
+	 * @return				an array list of roomReservation
+	 */
+	public List<RoomReservation> getRoomReservationsForDate(String dateString) {
+		Date date = createDateFromDateString(dateString);
 		Map<Long, RoomReservation> roomReservationMap = new HashMap<>();
 
 		Iterable<Room> rooms = this.roomRepository.findAll();
@@ -62,4 +73,23 @@ public class RoomReservationService {
 		return roomReservations;
 	}
 
+	/**
+	 * @param	dateString	a string represents date, such as 2019-10-08
+	 * @return 				a Date format date
+	 */
+	private Date createDateFromDateString(String dateString) {
+				
+		Date date = null;
+		if(null != dateString) {
+			try {
+				date = DATE_FORMAT.parse(dateString);
+			}catch (ParseException pe) {
+				date = new Date();
+			}
+		} else {
+			date = new Date();
+		}
+		
+		return date;
+	}
 }
