@@ -12,9 +12,9 @@ Practice Spring Boot by a web application "Happy Hotel room reservation".
 * mockito MockMVC
 * JavaScript
 * Bootstrap
-* thymeleaf
+* Thymeleaf
 * RESTful APIs
-* javadoc
+* JavaDoc
 
 ## Environment Setup
 1. Install jdk and set corresponding **JRE libraries** in IDE *preference*.
@@ -35,7 +35,7 @@ Practice Spring Boot by a web application "Happy Hotel room reservation".
 |Username|sa|
 |Password (null)|| 
 
-## javadoc format
+## JavaDoc format
 * @author
 * @param
 * @return
